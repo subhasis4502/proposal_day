@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proposal to my Girlfriend</title>
+    <style>
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      h2, h1 {
+        font-size: 4rem;
+      }
+      .proposal-box {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        text-align: center;
+      }
+      input[type="button"] {
+        padding: 10px 20px;
+        font-size: 4rem;
+        background-color: #4caf50;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+
+      #text {
+        font-size: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="proposal-box">
+        <h2>🥰Happy Propose Day🥰</h2>
+        <input type="button" value="Propose Me" onclick="sendProposal()" />
+        <h4 id="text"></h4>
+        <h1 id="propose"></h1>
+      </div>
+    </div>
+    <script>
+      function sendProposal() {
+        let element = "text";
+        let text =
+          "I am truly grateful and lucky to have you in my life. You bring so much joy, love and laughter into my world, and every day I wake up feeling grateful for your presence in my life. Shreyashee, you are my rock, my support and my reason for smiling every day. You have the kindest heart, the sharpest mind and the most beautiful soul. I am so lucky to have you by my side through thick and thin, and I promise to cherish, support and love you for the rest of my life. I cannot imagine my life without you, and I am thankful every day for your love, laughter and unwavering support. You are my best friend, my soulmate, and my true love. I am the luckiest man in the world to be with you.";
+        let speed = 50;
+        var index = 0;
+        var interval = setInterval(function () {
+          document.getElementById(element).innerHTML += text.charAt(index);
+          index++;
+          if (index > text.length - 1) {
+            clearInterval(interval);
+          }
+        }, speed);
+
+        setTimeout(() => {
+          document.getElementById("propose").innerHTML = "I LOVE YOU 💘💖";
+        }, 33000);
+      }
+    </script>
+  </body>
+</html>
